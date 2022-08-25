@@ -22,3 +22,39 @@ button {
 li {
     list-style-type: none;
 }
+.upperMenu {
+    height: 88px;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 85.26%;
+    background: #FFFFFF;
+}
+.upperMenu__icon-1 {
+    position: absolute;
+    left: 5%;
+    right: 82.5%;
+    top: 4.02%;
+    bottom: 89.28%;  
+}
+
+.icon-1 {
+    height: 40px;
+    width: 40px;
+    left: 16px;
+    top: 24px;
+    border-radius: 20px;
+    background: #FF3E79;
+    border-radius: 20px;
+}
+
+.icon__line {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='40' height='40' rx='20' fill='%23FF3E79'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 13C11 12.4477 11.4477 12 12 12H28C28.5523 12 29 12.4477 29 13C29 13.5523 28.5523 14 28 14H12C11.4477 14 11 13.5523 11 13ZM11 20C11 19.4477 11.4477 19 12 19H20C20.5523 19 21 19.4477 21 20C21 20.5523 20.5523 21 20 21H12C11.4477 21 11 20.5523 11 20ZM12 26C11.4477 26 11 26.4477 11 27C11 27.5523 11.4477 28 12 28H24C24.5523 28 25 27.5523 25 27C25 26.4477 24.5523 26 24 26H12Z' fill='white'/%3e%3c/svg%3e ");
+    width: 40px; 
+    height: 40px; 
+}
