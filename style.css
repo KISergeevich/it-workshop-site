@@ -100,6 +100,9 @@ li {
     margin-right: 5%;
     align-self: center;
 }
+.main__highlightforDecstop {
+    display: none;
+}
 @media (min-width: 414px) {
     .main__highlight {
         margin-right: 3%; 
@@ -111,6 +114,15 @@ li {
     }
     .main__title {
         margin-top: 42px;
+    }
+    .main__highlight {
+        display: none;
+    }
+    .main__highlightforDecstop {
+        display: flex;
+        align-items: center;
+        margin-right: 3%;
+        align-self: center;
     }
 }
 .main__h1 {
