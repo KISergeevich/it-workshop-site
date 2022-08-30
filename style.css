@@ -10,7 +10,12 @@ body {
 *::after, *::before {
     box-sizing: inherit;
 }
-
+.main__textTablet {
+    display: none;
+}
+.main__textDecstop  {
+    display: none;
+}
 .upperMenu__divider_tablet {
     display: none;
     margin-right: 16px;
@@ -24,7 +29,9 @@ body {
 
 li {
     list-style-type: none;
-    
+}
+a {
+    text-decoration: none;
 }
 .upperMenu {
     margin: 0;
@@ -75,12 +82,6 @@ li {
 }
 .upperMenu__button + .upperMenu__button {
     margin-left: 0;
-}
-.main_textTablet {
-    display: none;
-}
-.main__textDecstop  {
-    display: none;
 }
 .main {
     display: flex;
@@ -160,14 +161,6 @@ li {
     width: 100%;
     padding-left: 5%;
     box-sizing: border-box;
-
-}
-.main__slideMenu::after {
-    content: "";
-    box-sizing: border-box;
-    width: 7,5%;
-    height: 40px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 @media (min-width: 414px) {
     .main__slideMenu {
@@ -184,7 +177,7 @@ li {
     letter-spacing: -0.20000000298023224px;
     text-align: left;
     color: #7E7E82;
-
+    
     height: 40px;
     display: flex;
     flex-direction: center;
@@ -200,4 +193,47 @@ li {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     outline: none;
+}
+
+.main__about {
+    display: flex;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    flex-direction: column;
+}
+.main_Textblock {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+@media (min-width: 414px) {
+    .main__about {
+        flex-direction: row;
+    }
+    .main__textTablet {
+        display: block;
+    }
+    body {
+        padding-right: 2%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main__nav {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .main__slideMenu {
+        flex-wrap: wrap;
+    }
+    .main__title {
+        margin-bottom: 8px;
+    }
+}
+
+.main__img {
+    width: 100%;
+    height: auto;
 }
