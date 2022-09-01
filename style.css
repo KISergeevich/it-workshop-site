@@ -15,6 +15,9 @@ body {
         padding-right: 2%;
     }
 }
+span {
+    display: none;
+}
 .main__textTablet {
     display: none;
 }
@@ -23,17 +26,12 @@ body {
         display: block;
     }
 }
-@media (min-width: 1100px) {
-    .main__textTablet {
-        display: none;
-    }
-}
-.main__textDecstop  {
-    display: none;
+.main__text {
+    margin-bottom: 20px;
 }
 @media (min-width: 1100px) {
-    .main__textDecstop {
-        display: block;
+    span {
+        display: inline;
     }
 }
 .upperMenu__divider_tablet {
@@ -261,14 +259,6 @@ p {
         padding-left: 3%;
         padding-right: 3%;
         flex: 1 1 50%;
-    }
-}
-br {
-    display: none;
-}
-@media (min-width: 414px) {
-    br {
-        display: block;
     }
 }
 @media (min-width: 1100px) {
