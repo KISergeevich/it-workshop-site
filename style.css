@@ -230,12 +230,19 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
-    overflow: auto; 
+    
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
     width: 90%;
     padding-right: 10px;
     box-sizing: border-box;
 }
 
+.main-info__slide-menu::-webkit-scrollbar {
+    display: none;
+}
 
 @media (min-width: 767px) {
     .main-info__slide-menu {
@@ -355,12 +362,6 @@ p {
     color: #1B1C21;
 }
 
-.main-info__arrow {
-    height: 10.292893409729004px;
-    width: 7.41421365737915px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3e%3c/svg%3e ");
-}
-
 .main-info__capture {
    width: 100%;
 }
@@ -374,18 +375,20 @@ p {
 .main-info__button-arrow {
     background: #F8F8F8;
     border: 0;
-    white-space: nowrap;
-    color: #1B1C21;
     font-family: 'TT Lakes';
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: #1B1C21;
+    white-space: nowrap;
 }
 
-.main-info__arrow-text {
-    margin-left: 16px;
+.main-info__button-arrow::before {
+    content: "";
+    width: 7.41px;
+    height: 10.29px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3e%3c/svg%3e ");
+    margin-right: 16px;
 }
