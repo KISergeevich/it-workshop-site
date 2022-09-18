@@ -1,0 +1,18 @@
+.viewport {
+    padding: 0;
+    font-family: "TT Lakes", "TimesNewRoman", sans-serif;
+    box-sizing:border-box;
+    margin: 0;
+    max-width: 1120px;
+}
+
+*::after, *::before {
+    box-sizing: inherit;
+}
+.burger-menu {
+    height: 1024px;
+    width: 320px;
+    margin-right: auto;
+    border: 1px solid black;
+    display: border-box;
+}
