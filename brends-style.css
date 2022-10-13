@@ -1,0 +1,12 @@
+body {
+    padding: 0;
+    font-family: "TT Lakes", "TimesNewRoman", sans-serif;
+    box-sizing:border-box;
+    margin: 0;
+}
+
+*::after, *::before {
+    box-sizing: inherit;
+}
+
+
