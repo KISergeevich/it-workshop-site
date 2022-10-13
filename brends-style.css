@@ -9,4 +9,93 @@ body {
     box-sizing: inherit;
 }
 
+@media (min-width: 767px) { 
+    .section-name {
+        display: flex;
+        height: 56px;
+        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+    }
+    .section-name__equipment-repair {
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        font-family: "TT Lakes";
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.20000000298023224px;
+        text-align: left;
+        color: #7E7E82; 
+        text-transform: uppercase;
+        align-self: center;
+        margin-left: 24px;
+    }
+}
+
+@media (min-width: 767px) { 
+    .main-inform {
+        display: flex;
+        flex-direction: column; 
+    }
+    .brends {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 24px;
+        padding-right: 24px;
+        justify-content: space-between;
+        padding-top: 24px;
+    }
+    .brends__icon {
+        width: 224px;
+        height: 72px;
+        background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;   
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+    }
+    .brends__button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid #FF3E79;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.5 6L0.707106 2.20711C0.316582 1.81658 0.316582 1.18342 0.707107 0.792893L0.792893 0.707107C1.18342 0.316583 1.81658 0.316583 2.20711 0.707107L6.79289 5.29289C7.18342 5.68342 7.18342 6.31658 6.79289 6.70711L2.20711 11.2929C1.81658 11.6834 1.18342 11.6834 0.792893 11.2929L0.707107 11.2071C0.316583 10.8166 0.316583 10.1834 0.707107 9.79289L4.5 6Z' fill='%23FF3E79'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .readmore {
+        padding-left: 16px;
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        margin-bottom: 16px;
+        font-weight: 500;
+        padding-top: 10px;
+    }
+    .readmore__button-arrow {
+        background: #F8F8F8;
+        border: 0;
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        color: #1B1C21;
+        white-space: nowrap;
+    }
+    .readmore__button-arrow::before {
+        content: "";
+        width: 7.41px;
+        height: 10.29px;
+        display: inline-block;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3e%3c/svg%3e ");
+        margin-right: 16px;
+    }
+}
 
