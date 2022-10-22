@@ -60,12 +60,12 @@ body {
 @media (min-width: 767px) {
     .main-inform .swiper {
         overflow: visible;
-        flex-wrap: wrap;
+        
         position: static;
-        display: flex;
+        width: auto;
         z-index: 0;
         margin-left: 0;
-        width: 100%;
+        
         margin-right: 0;
         transform: none;
         height: auto;
@@ -73,7 +73,7 @@ body {
     .swiper-wrapper.brends {
         display: flex;
         overflow: visible;
-        position: static;
+        
         transform: none;
         justify-content: start;
         flex-wrap: wrap;
