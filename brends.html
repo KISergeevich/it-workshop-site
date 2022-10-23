@@ -84,9 +84,7 @@
         const breakpoint = window.matchMedia('(min-width:767px)');
         // keep track of swiper instances to destroy later
         let mySwiper;
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
+        
         const breakpointChecker = function () {
             // if larger viewport and multi-row layout needed
             if (breakpoint.matches === true) {
@@ -100,9 +98,7 @@
                 return enableSwiper();
             }
         };
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
+        
         const enableSwiper = function () {
             mySwiper = new Swiper('.swiper', {
                 pagination: {
@@ -112,12 +108,10 @@
                 slideClass: 'swiper-slide',
             });
         };
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////
-        // keep an eye on viewport size changes
+        
+        
         breakpoint.addListener(breakpointChecker);
-        // kickstart
+        
         breakpointChecker();
     </script>
 </body>

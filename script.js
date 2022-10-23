@@ -1,6 +1,6 @@
 
 
-/*
+
 let readMore = document.querySelector('.readmore__button-arrow');
 let brends = document.querySelector('.brends');
 
@@ -13,4 +13,4 @@ readMore.onclick = function() {
         readMore.textContent = 'Читать далее';
     }
 }
-*/
+

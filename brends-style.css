@@ -42,7 +42,6 @@ body {
     .main-inform {
         display: flex;
         background-color: #F2F2F2;
-        height: 168px;
         flex-direction: column;
         align-items: center;
         height: 100%;
@@ -60,28 +59,34 @@ body {
 @media (min-width: 767px) {
     .main-inform .swiper {
         overflow: visible;
-        
         position: static;
         width: auto;
         z-index: 0;
         margin-left: 0;
-        
         margin-right: 0;
-        transform: none;
+        padding-bottom: 0;
         height: auto;
+        padding-top: 24px;
     }
     .swiper-wrapper.brends {
         display: flex;
-        overflow: visible;
+        overflow: hidden;
         
         transform: none;
         justify-content: start;
         flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        background-color: #F2F2F2;
+        width: 720px;
+        height: 160px;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 } 
+@media (min-width: 1100px) {
+    .swiper-wrapper.brends {
+        width: 1056px;
+    }
+}
 .brends__logo {
     align-self: center;
     margin-left: 16px;
@@ -112,10 +117,30 @@ body {
 @media (min-width: 767px) {
     .swiper-wrapper .swiper-slide {
         flex-shrink: 1;
-        flex-wrap: wrap;
+        
         width: 224px;
         height: 72px;
+        margin-right: 24px;
+        margin-bottom: 16px;
     }
+    .swiper-slide:nth-child(3n+3) {
+        margin-right: 0;
+    }
+
+}
+@media (min-width: 1100px) {
+    .swiper-wrapper .swiper-slide {
+        width: 240px;
+        margin-right: 32px;
+    }
+    .swiper-slide:nth-child(4n+4) {
+        margin-right: 0;
+    }
+}
+
+
+.brends.brends--expanded {
+    height: auto;
 }
 
 .readmore {
@@ -128,5 +153,36 @@ body {
     }
     .readmore {
         display: block;
+        margin-top: 24px;
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        margin-bottom: 16px;
+        font-weight: 500;
+        align-self: flex-start;
+    }
+    .readmore__button-arrow {
+        background: #F8F8F8;
+        border: 0;
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        color: #1B1C21;
+        white-space: nowrap;
+        background-color: #F2F2F2;
+        margin-right: auto;
+        margin-left: 5vw;
+    }
+    .readmore__button-arrow::before {
+        content: "";
+        width: 7.41px;
+        height: 10.29px;
+        display: inline-block;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3e%3c/svg%3e ");
+        margin-right: 16px;
     }
 }
