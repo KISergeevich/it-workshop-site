@@ -1,8 +1,8 @@
-let readMore = document.querySelector('.readmore__button-arrow');
+const readMore = document.querySelector('.readmore__button-arrow');
 
-let brends = document.querySelector('.brends');
+const brends = document.querySelector('.brends');
 
-readMore.onclick = function () {
+readMore.addEventListener ('click', function() {
     brends.classList.toggle('brends--expanded');
     readMore.classList.toggle('readmore__button-arrow--reverse');
 
@@ -11,7 +11,7 @@ readMore.onclick = function () {
     } else {
         readMore.textContent = 'Читать далее';
     }
-}
+});
 
 let mySwiper;
 function breakpointChecker(event) {
