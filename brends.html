@@ -7,19 +7,20 @@
     <meta name="description" content="Авторизованный сервисный центр по ремонту техники Dell">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CPS</title>
-    <link href="/fonts/stylesheet.css" rel="stylesheet">
-    <link href="brends-style.css" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link href="/fonts/stylesheet.css" rel="stylesheet">
+    <link href="brends-style.css" rel="stylesheet">
+    
 </head>
 
 <body>
-    <header class="section-name">
-        <p class="section-name__equipment-repair">Ремонт техники различных брендов</p>
-    </header>
     <main class="main-inform">
+        <!-- <div class="section-name">
+            <p class="section-name__equipment-repair">Ремонт техники различных брендов</p>
+        </div> -->
         <div class="swiper" data-mobile="false">
             <div class="swiper-wrapper brends">
                 <div class="swiper-slide">
@@ -79,40 +80,37 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        // breakpoint where swiper will be destroyed
-        // and switches to a dual-column layout
-        const breakpoint = window.matchMedia('(min-width:767px)');
-        // keep track of swiper instances to destroy later
-        let mySwiper;
         
-        const breakpointChecker = function () {
-            // if larger viewport and multi-row layout needed
-            if (breakpoint.matches === true) {
-                // clean up old instances and inline styles when available
-                if (mySwiper !== undefined) mySwiper.destroy(true, true);
-                // or/and do nothing
-                return;
-                // else if a small viewport and single column layout needed
-            } else if (breakpoint.matches === false) {
-                // fire small viewport version of swiper
-                return enableSwiper();
+        let mySwiper;
+        function breakpointChecker(event) {
+            if (event.matches === true) {
+                if (mySwiper !== undefined) {
+                    mySwiper.destroy(true, true);
+                }   
+            } else if (event.matches === false) {
+                enableSwiper();
             }
         };
-        
-        const enableSwiper = function () {
+
+        function enableSwiper() {
             mySwiper = new Swiper('.swiper', {
                 pagination: {
                     el: ".swiper-pagination",
+                    clickable: true,
                 },
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 slideClass: 'swiper-slide',
+                centeredSlides: false,
+                spaceBetween: 16,
             });
         };
-        
-        
-        breakpoint.addListener(breakpointChecker);
-        
-        breakpointChecker();
+        const breakpoint = window.matchMedia('(min-width:767px)');
+
+        breakpoint.addEventListener('change', breakpointChecker);
+        // breakpointChecker(breakpoint); грязный нетипизированный хак :)
+        if (breakpoint.matches === false) {
+            enableSwiper();
+        } 
     </script>
 </body>
 
