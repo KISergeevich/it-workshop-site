@@ -14,7 +14,7 @@ body {
     min-width: 320px;
     height: 80px;
     display: flex;
-    
+    width: 100%;
     background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
     background-color: #FFFFFF;
     box-sizing: border-box;
@@ -31,14 +31,25 @@ body {
     color: #7E7E82; 
     text-transform: uppercase;
     align-self: center;
-    margin-left: 24px;
+    margin-left: 16px;
+}
+@media (min-width: 767px) {
+    .section-name__equipment-repair {
+        margin: auto;
+        width: 720px;
+    }
+}
+@media (min-width: 1100px) {
+    .section-name__equipment-repair {
+        margin: auto;
+        width: 1056px;
+    }
 }
 
 .main-inform {
     background-color: #F2F2F2;
-    height: 154px;
-    padding-right: 16px;
-    padding-left: 16px;
+    height: 234px;
+    
 }
 @media (min-width: 767px) {
     .main-inform {
