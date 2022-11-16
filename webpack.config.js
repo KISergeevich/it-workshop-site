@@ -13,23 +13,29 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin()
     ],
     module: {
         rules: [
-          {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
                     options: {
                         esModule: false
                     },
                 },
-            ],
-          },
+                ],
+            },
+            {
+                test: /\.(png|jpg|svg|gif)$/,
+                use: ['file-loader']
+            },
         ],
-      },
+    },
 };
