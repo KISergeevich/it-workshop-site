@@ -2,10 +2,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-import "./styles/brends-style.css";
 import "./styles/menu-style.css";
 import "./styles/style.css";
-
+import "./styles/brends-style.css";
 
 const readMore = document.querySelector('.readmore__button-arrow');
 

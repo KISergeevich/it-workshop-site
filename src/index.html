@@ -8,70 +8,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CPS</title>
     <link href="styles/stylesheet.css" rel="stylesheet">
-    <link href="styles/brends-style.css" rel="stylesheet">
-    
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <main class="main-inform">
-        <div class="section-name">
-            <p class="section-name__equipment-repair">Ремонт техники различных брендов</p>
+<body class="viewport">
+    <header class="upper-menu">
+        <div class="upper-menu__left">
+            <button type="button" class="upper-menu__button upper-menu__button__burger" name="burger">   
+            </button>
+            <div class="upper-menu__divider upper-menu__divider_tablet"></div>
+            <a href="#" class="upper-menu__logo"><img src="assets/IMG/logo.png"></a>
         </div>
-        <div class="swiper" data-mobile="false">
-            <div class="swiper-wrapper brends">
-                <div class="swiper-slide">
-                    <img src="assets/IMG/lenovo.png" class="brends__logo" alt="lenovo logo">
-                    <button type="button" class="brends__button" name="lenovo"></button>
+        <div class="upper-menu__right">
+            <div class="upper-menu__mob">
+                <button type="button" class="upper-menu__button upper-menu__button__phone" name="group">
+                </button>
+                <button type="button" class="upper-menu__button upper-menu__button__massage" name="icon">
+                </button>
+                <button type="button" class="upper-menu__button upper-menu__button__icon" name="icon">
+                </button>
+            </div>
+            <div class="upper-menu__divider"></div>
+            <button type="button" class="upper-menu__button upper-menu__button__tools" name="group">
+            </button>
+            <button type="button" class="upper-menu__button upper-menu__button__glass" name="icon">
+            </button>
+        </div>
+    </header>
+    <main class="main-info">
+        <div class="main-info__title">
+            <div class="main-info__highlight">
+                <svg width="4" height="40" viewBox="0 0 4 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4 4C4 1.79086 2.20914 0 0 0V0V40V40C2.20914 40 4 38.2091 4 36V4Z" fill="#41F6D7" />
+                </svg>
+            </div>
+            <div class="main-info__highlight-for-decstop">
+                <svg width="3" height="40" viewBox="0 0 3 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 1.5C3 0.671574 2.32843 0 1.5 0V0C0.671573 0 0 0.671573 0 1.5V38.5C0 39.3284 0.671573 40 1.5 40V40C2.32843 40 3 39.3284 3 38.5V1.5Z"
+                        fill="#41F6D7" />
+                </svg>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/sumsung.png" class="brends__logo" alt="sumsung logo">
-                    <button type="button" class="brends__button" name="sumsung"></button>
+                <h1 class="main-info__title-text">Услуги и сервисы</h1>
+                <div class="main-info__button-decstop"> 
+                    <label class="main-info__buttontext">Оставить заявку
+                        <button type="button" class="upper-menu__button upper-menu__button__tools" name="group">   
+                        </button>
+                    </label>
+                    <label class="main-info__buttontext">Статус ремонта
+                        <button type="button" class="upper-menu__button upper-menu__button__glass" name="icon">  
+                        </button>
+                    </label>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/apple.png" class="brends__logo" alt="apple logo">
-                    <button type="button" class="brends__button" name="apple"></button>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/viewSonic.png" class="brends__logo" alt="viewSonic logo">
-                    <button type="button" class="brends__button" name="viewSonic"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/bosch.png" class="brends__logo" alt="bosch logo">
-                    <button type="button" class="brends__button" name="bosch"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/hp.png" class="brends__logo" alt="hp logo">
-                    <button type="button" class="brends__button" name="hp"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/acer.png" class="brends__logo" alt="acer logo">
-                    <button type="button" class="brends__button" name="acer"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/sony.png" class="brends__logo" alt="sony logo">
-                    <button type="button" class="brends__button" name="sony"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/lenovo.png" class="brends__logo" alt="lenovo logo">
-                    <button type="button" class="brends__button" name="lenovo"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/sumsung.png" class="brends__logo" alt="sumsung logo">
-                    <button type="button" class="brends__button" name="sumsung"></button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/IMG/apple.png" class="brends__logo" alt="apple logo">
-                    <button type="button" class="brends__button" name="apple"></button>
+                <nav class="main-info__slide-menu">
+                    <a href="#" class="main-info__nav" autofocus>Ремонтируемые устройства</a>
+            <a href="#" class="main-info__nav">Дополнительные услуги</a>
+            <a href="#" class="main-info__nav">Цены на услуги</a>
+            <a href="#" class="main-info__nav">Адреса сервисных центров</a>
+            <a href="#" class="main-info__nav">Специальные цены</a>
+            <a href="#" class="main-info__nav">Отзывы</a>
+        </nav>
+        <div class="main-info__about">
+            <div class="main-info_text-block">
+                <p class="main-info__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только
+                    у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                <p class="main-info__text-tablet">Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                    партнера <span class="main__textDextop">, что подтверждает большое количество постоянных клиентов.
+                        Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и
+                        близким.</span>
+                </p>
+                <div class="main-info__readmore">
+                    <button type="button" name="readmore" class="main-info__button-arrow">
+                        Читать далее
+                    </button>
                 </div>
             </div>
-            
-            <div class="swiper-pagination"></div>
+            <div class="main-info__img">
+                <img src="./assets/IMG/brand-company.jpg" class="main-info__capture" alt="лого компании">
+            </div>
         </div>
-        
-        <div class="readmore">
-            <button type="button" name="readmore" class="readmore__button-arrow">
-                Читать далее
-            </button>
+        <div class="main-inform">
+            <div class="section-name">
+                <p class="section-name__equipment-repair">Ремонт техники различных брендов</p>
+            </div>
+            <div class="swiper" data-mobile="false">
+                <div class="swiper-wrapper brends">
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/lenovo.png" class="brends__logo" alt="lenovo logo">
+                        <button type="button" class="brends__button" name="lenovo"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/sumsung.png" class="brends__logo" alt="sumsung logo">
+                        <button type="button" class="brends__button" name="sumsung"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/apple.png" class="brends__logo" alt="apple logo">
+                        <button type="button" class="brends__button" name="apple"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/viewSonic.png" class="brends__logo" alt="viewSonic logo">
+                        <button type="button" class="brends__button" name="viewSonic"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/bosch.png" class="brends__logo" alt="bosch logo">
+                        <button type="button" class="brends__button" name="bosch"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/hp.png" class="brends__logo" alt="hp logo">
+                        <button type="button" class="brends__button" name="hp"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/acer.png" class="brends__logo" alt="acer logo">
+                        <button type="button" class="brends__button" name="acer"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/sony.png" class="brends__logo" alt="sony logo">
+                        <button type="button" class="brends__button" name="sony"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/lenovo.png" class="brends__logo" alt="lenovo logo">
+                        <button type="button" class="brends__button" name="lenovo"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/sumsung.png" class="brends__logo" alt="sumsung logo">
+                        <button type="button" class="brends__button" name="sumsung"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/IMG/apple.png" class="brends__logo" alt="apple logo">
+                        <button type="button" class="brends__button" name="apple"></button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="readmore">
+                <button type="button" name="readmore" class="readmore__button-arrow">
+                    Читать далее
+                </button>
+            </div>
         </div>
     </main>
     <script src="index.js"></script>
