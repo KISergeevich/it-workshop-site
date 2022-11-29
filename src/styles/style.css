@@ -173,7 +173,7 @@ p {
     align-self: center;
 }
 
-.main-info__highlight-for-decstop {
+.main-info__highlight-for-desktop {
     display: none;
 }
 
@@ -187,7 +187,7 @@ p {
     .main-info__highlight {
         display: none;
     }
-    .main-info__highlight-for-decstop {
+    .main-info__highlight-for-desktop {
         display: flex;
         align-items: center;
         margin-right: 3%;
@@ -198,7 +198,7 @@ p {
 .main-info__title-text {
     height: 40px;
     border-radius: nullpx;
-    font-family: TT Lakes;
+    font-family: 'TT Lakes';
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6000000238418579px;
@@ -212,7 +212,7 @@ p {
     }
 }
 
-.main-info__button-decstop {
+.main-info__button-desktop {
     display: none;
     flex-direction: space-between;
     align-items: center;
@@ -223,7 +223,7 @@ p {
     .upper-menu {
         display: none;
     }
-    .main-info__button-decstop {
+    .main-info__button-desktop {
         display: flex;
     }
 }

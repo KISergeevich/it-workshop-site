@@ -17,7 +17,7 @@ body {
     height: 80px;
     display: flex;
     width: 100%;
-    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+    background: linear-gradient(90deg, #fff 1.39%, #F8F8F8 100%);
     box-sizing: border-box;
 }
 .section-name__equipment-repair {
@@ -50,7 +50,7 @@ body {
 .main-inform {
     background-color: #f8f8f8;
     height: 234px;
-    
+    width: 100%;
 }
 @media (min-width: 767px) {
     .main-inform {
@@ -64,15 +64,14 @@ body {
         padding-left: 0;
     }
 } 
-.swiper {
+.brends-swiper {
     padding-bottom: 36px;
-    
     overflow: hidden;
     height: 72px;
     top: 16px;
 }
 @media (min-width: 767px) {
-    .main-inform .swiper {
+    .main-inform .brends-swiper {
         overflow: visible;
         position: static;
         width: auto;
@@ -83,7 +82,7 @@ body {
         height: auto;
         padding-top: 24px;
     }
-    .swiper-wrapper.brends {
+    .brends-swiper__wrapper {
         display: flex;
         overflow: hidden;
         
@@ -98,7 +97,7 @@ body {
     }
 } 
 @media (min-width: 1100px) {
-    .swiper-wrapper.brends {
+    .brends-swiper__wrapper {
         width: 1056px;
     }
 }
@@ -120,7 +119,7 @@ body {
     margin-right: 16px;
 }
 
-.swiper-slide {
+.brends-swiper__slide {
     display: flex;
     flex-shrink: 0;
     width: 240px;
@@ -130,7 +129,7 @@ body {
     box-sizing: border-box;
 }
 @media (min-width: 767px) {
-    .swiper-wrapper .swiper-slide {
+    .brends-swiper__wrapper .brends-swiper__slide {
         flex-shrink: 1;
         
         width: 224px;
@@ -138,23 +137,23 @@ body {
         margin-right: 24px;
         margin-bottom: 16px;
     }
-    .swiper-slide:nth-child(3n+3) {
+    .brends-swiper__slide:nth-child(3n+3) {
         margin-right: 0;
     }
 
 }
 @media (min-width: 1100px) {
-    .swiper-wrapper .swiper-slide {
+    .brends-swiper__wrapper .brends-swiper__slide {
         width: 240px;
         margin-right: 32px;
     }
-    .swiper-slide:nth-child(4n+4) {
+    .brends-swiper__slide:nth-child(4n+4) {
         margin-right: 0;
     }
 }
 
 
-.brends.brends--expanded {
+.brends-swiper__wrapper.brends--expanded {
     height: auto;
 }
 
@@ -167,7 +166,7 @@ body {
 }
 
 @media (min-width: 767px) {
-    .swiper-pagination {
+    .brends-swiper__pagination {
         display: none;
     }
     .readmore {
@@ -207,4 +206,97 @@ body {
     .readmore {
         width: 1056px;
     }
+}
+
+/*тут второй свайпер*/
+
+.equipment {
+    width: 100%;
+    
+}
+
+.section-header {
+    width: 100%;
+    background: linear-gradient(270deg, #fff 0%, #F8F8F8 98.61%);
+    height: 55px;
+    border-top: 1px solid #D9FFF5;
+    display: flex;
+    margin-bottom: 24px;
+}
+.section-header__title {
+    margin: 0;
+    padding: 0;
+    white-space: wrap;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #7E7E82; 
+    text-transform: uppercase;
+    align-self: center;
+    margin-left: 24px;
+}
+.equipment-swiper{
+    padding-bottom: 36px;
+    overflow: hidden;
+    height: 160px;
+    top: 16px;
+}
+.equipment-swiper__wrapper {
+    display: flex;
+}
+.equipment__block.swiper-slide {
+    width: 240px;
+    height: 160px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.equipment__title {
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #1B1C21;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.brends__button_position {
+    margin-left: auto;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    margin-top: auto;
+}
+
+@media (min-width: 767px) {
+    .equipment {
+        display: flex;
+        flex-direction: column;
+    }
+    .equipment-swiper__wrapper {
+        display: flex;
+        overflow: hidden;
+        justify-content: start;
+        flex-wrap: wrap;
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 176px;
+        
+    }
+    .equipment__block {
+        width: 224px;
+        margin-right: 24px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    .equipment__block:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    
 }

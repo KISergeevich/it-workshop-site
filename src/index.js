@@ -8,7 +8,7 @@ import "./styles/brends-style.css";
 
 const readMore = document.querySelector('.readmore__button-arrow');
 
-const brends = document.querySelector('.brends');
+const brends = document.querySelector('.brends-swiper__wrapper');
 
 readMore.addEventListener ('click', function() {
     brends.classList.toggle('brends--expanded');
@@ -21,25 +21,43 @@ readMore.addEventListener ('click', function() {
     }
 });
 
-let mySwiper;
+let brendsSwiper;
 function breakpointChecker(event) {
     if (event.matches === true) {
-        if (mySwiper !== undefined) {
-            mySwiper.destroy(true, true);
+        if (brendsSwiper !== undefined) {
+            brendsSwiper.destroy(true, true);
+        }
+        if (equipmentSwiper !== undefined) {
+            equipmentSwiper.destroy(true, true);
         }
     } else if (event.matches === false) {
-        enableSwiper();
+        enableBrendsSwiper();
+        enableEquipmentSwiper();
     }
 };
 
-function enableSwiper() {
-    mySwiper = new Swiper('.swiper', {
+function enableBrendsSwiper() {
+    brendsSwiper = new Swiper('.brends-swiper', {
         pagination: {
-            el: ".swiper-pagination",
+            el: ".brends-swiper__pagination",
             clickable: true,
         },
         slidesPerView: 'auto',
-        slideClass: 'swiper-slide',
+        slideClass: 'brends-swiper__slide',
+        centeredSlides: false,
+        spaceBetween: 16,
+    });
+};
+let equipmentSwiper;
+function enableEquipmentSwiper() {
+    equipmentSwiper = new Swiper('.equipment-swiper', {
+        pagination: {
+            el: ".equipment-swiper__pagination",
+            clickable: true,
+        },
+        autoHeight: true,
+        slidesPerView: 'auto',
+        slideClass: 'equipment__block',
         centeredSlides: false,
         spaceBetween: 16,
     });
@@ -49,5 +67,6 @@ const breakpoint = window.matchMedia('(min-width:767px)');
 breakpoint.addEventListener('change', breakpointChecker);
 
 if (breakpoint.matches === false) {
-    enableSwiper();
+    enableBrendsSwiper();
+    enableEquipmentSwiper();
 } 
