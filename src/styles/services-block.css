@@ -1,0 +1,306 @@
+@import "stylesheet.css";
+
+.viewport {
+    padding: 0;
+    font-family: "TT Lakes", "TimesNewRoman", sans-serif;
+    box-sizing:border-box;
+    height: 597px;
+    min-width: 320px;
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+*::after, *::before {
+    box-sizing: inherit;
+}
+
+span {
+    display: none;
+}
+
+.main-info__text-tablet {
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .main-info__text-tablet {
+        display: block;
+    }
+}
+
+.main-info__text {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1100px) {
+    span {
+        display: inline;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-info__buttontext {
+    white-space: nowrap;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background: #F8F8F8;
+    min-width: 320px;
+}
+
+.main-info__title {
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 1100px) {
+    .main-info__title {
+        margin-top: 42px;
+    }
+}
+
+.main-info__highlight {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    align-self: center;
+}
+
+.main-info__highlight-for-desktop {
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .main-info__highlight {
+        margin-right: 3%; 
+    }
+}
+
+@media (min-width: 1100px) {
+    .main-info__highlight {
+        display: none;
+    }
+    .main-info__highlight-for-desktop {
+        display: flex;
+        align-items: center;
+        margin-right: 3%;
+        align-self: center;
+    }
+}
+
+.main-info__title-text {
+    height: 40px;
+    border-radius: nullpx;
+    font-family: 'TT Lakes';
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+    color: #1B1C21;
+}
+
+@media (min-width: 1100px) {
+    .main-info__title-text {
+        margin: 0;
+    }
+}
+
+.main-info__button-desktop {
+    display: none;
+    flex-direction: space-between;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media (min-width: 1100px) {
+    .main-info__button-desktop {
+        display: flex;
+    }
+}
+
+.main-info__slide-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    width: 90%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.main-info__slide-menu::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .main-info__slide-menu {
+        width: 100%;
+        padding-left: 3%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main-info__slide-menu {
+        flex-wrap: wrap;
+    }
+}
+
+.main-info__nav {
+    box-sizing: border-box;
+    border: 0;
+    background: #F8F8F8;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #7E7E82;
+    
+    height: 40px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.main-info__nav:hover,
+.main-info__nav:focus,
+.main-info__nav:active  {
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    outline: none;
+}
+
+@media (min-width: 1100px) {
+    .main-info__nav {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+.main-info__about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    justify-content: space-between;
+    height: auto;
+}
+
+@media (min-width: 767px) {
+    .main-info__about {
+        flex-direction: row;
+    }
+}
+
+.main-info_text-block {
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (min-width: 767px) {
+    .main-info_text-block {
+        padding-left: 3%;
+        padding-right: 3%;
+        flex: 1 1 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main-info__title {
+        margin-bottom: 8px;
+    }
+}
+
+@media (min-width: 767px) {
+    .main-info__img {
+        margin-right: 25px;
+        height: 100%;
+        width: auto;
+        border-radius: 6px;
+        flex: 1 1 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main-info__img {
+        margin-right: 0;
+    }
+}
+
+.main-info__readmore {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    margin-bottom: 16px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.main-info__readmore:visited {
+    color: #1B1C21;
+}
+
+.main-info__capture {
+   width: 100%;
+}
+
+@media (min-width: 767px) {
+    .main-info__capture {
+        border-radius: 6px; 
+    }
+}
+
+.main-info__button-arrow {
+    background: #F8F8F8;
+    border: 0;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: #1B1C21;
+    white-space: nowrap;
+}
+
+.main-info__button-arrow::before {
+    content: "";
+    width: 7.41px;
+    height: 10.29px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3e%3c/svg%3e ");
+    margin-right: 16px;
+}
