@@ -6,7 +6,8 @@ import "./styles/burger-menu.css";
 import "./styles/header-block.css";
 import "./styles/services-block.css";
 import "./styles/brends-swiper-block.css";
-import "./styles/equipment-block.css"
+import "./styles/equipment-swiper-block.css";
+import "./styles/price-swiper-block.css"
 
 const readMore = document.querySelector('.readmore__button-arrow');
 
@@ -19,7 +20,7 @@ readMore.addEventListener ('click', function() {
     if (brends.classList.contains('brends--expanded')) {
         readMore.textContent = 'Скрыть';
     } else {
-        readMore.textContent = 'Читать далее';
+        readMore.textContent = 'Показать всё';
     }
 });
 
@@ -32,9 +33,13 @@ function breakpointChecker(event) {
         if (equipmentSwiper !== undefined) {
             equipmentSwiper.destroy(true, true);
         }
+        if (pricetSwiper !== undefined) {
+            priceSwiper.destroy(true, true);
+        }
     } else if (event.matches === false) {
         enableBrendsSwiper();
         enableEquipmentSwiper();
+        enablePriceSwiper();
     }
 };
 
@@ -59,7 +64,21 @@ function enableEquipmentSwiper() {
         },
         autoHeight: true,
         slidesPerView: 'auto',
-        slideClass: 'equipment__block',
+        slideClass: 'equipment-swiper__block',
+        centeredSlides: false,
+        spaceBetween: 16,
+    });
+};
+let priceSwiper;
+function enablePriceSwiper() {
+    priceSwiper = new Swiper('.price-swiper', {
+        pagination: {
+            el: ".price-swiper__pagination",
+            clickable: true,
+        },
+        autoHeight: true,
+        slidesPerView: 'auto',
+        slideClass: 'price-swiper__slide',
         centeredSlides: false,
         spaceBetween: 16,
     });
@@ -71,4 +90,5 @@ breakpoint.addEventListener('change', breakpointChecker);
 if (breakpoint.matches === false) {
     enableBrendsSwiper();
     enableEquipmentSwiper();
+    enablePriceSwiper();
 } 

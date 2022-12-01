@@ -14,7 +14,7 @@ body {
 
 .header-block {
     min-width: 320px;
-    height: 80px;
+    min-height: 56px;
     display: flex;
     width: 100%;
     background: linear-gradient(90deg, #F8F8F8 1.39%, #fff 100%);
@@ -34,6 +34,7 @@ body {
     text-transform: uppercase;
     align-self: center;
     margin-left: 16px;
+    margin-top: 16px;
 }
 @media (min-width: 767px) {
     .header-block__title {
@@ -46,13 +47,13 @@ body {
     }
 }
 
-.main-inform {
+.brends {
     background-color: #f8f8f8;
     height: 234px;
     width: 100%;
 }
 @media (min-width: 767px) {
-    .main-inform {
+    .brends {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -70,7 +71,7 @@ body {
     top: 16px;
 }
 @media (min-width: 767px) {
-    .main-inform .brends-swiper {
+    .brends .brends-swiper {
         overflow: visible;
         position: static;
         width: auto;
