@@ -3,7 +3,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 import "./styles/burger-menu.css";
-import "./styles/header-block.css";
+import "./styles/header-footer.css";
 import "./styles/services-block.css";
 import "./styles/brends-swiper-block.css";
 import "./styles/equipment-swiper-block.css";
@@ -33,7 +33,7 @@ function breakpointChecker(event) {
         if (equipmentSwiper !== undefined) {
             equipmentSwiper.destroy(true, true);
         }
-        if (pricetSwiper !== undefined) {
+        if (priceSwiper !== undefined) {
             priceSwiper.destroy(true, true);
         }
     } else if (event.matches === false) {
