@@ -10,8 +10,6 @@ body {
 *::after, *::before {
     box-sizing: inherit;
 }
-
-
 .header-block {
     min-width: 320px;
     min-height: 56px;
@@ -73,7 +71,7 @@ body {
     .brends .brends-swiper {
         overflow: visible;
         position: static;
-        width: auto;
+        width: 100%;
         z-index: 0;
         margin-left: 0;
         margin-right: 0;
@@ -82,17 +80,16 @@ body {
         padding-top: 24px;
     }
     .brends-swiper__wrapper {
+        box-sizing: border-box;
         display: flex;
         overflow: hidden;
-        
+        padding-left: 24px;
+        padding-right: 24px;
         transform: none;
-        justify-content: start;
+        justify-content: space-between;
         flex-wrap: wrap;
-        width: 720px;
+        width: 100%;
         height: 160px;
-        margin-left: auto;
-        margin-right: auto;
-        
     }
 } 
 @media (min-width: 1100px) {
@@ -122,6 +119,7 @@ body {
     display: flex;
     flex-shrink: 0;
     width: 240px;
+    height: 72px;
     background-color: #FFFFFF;
     border: 1px solid #eaeaea;
     border-radius: 6px;
@@ -129,28 +127,17 @@ body {
 }
 @media (min-width: 767px) {
     .brends-swiper__wrapper .brends-swiper__slide {
-        flex-shrink: 1;
-        
         width: 224px;
         height: 72px;
-        margin-right: 24px;
         margin-bottom: 16px;
     }
-    .brends-swiper__slide:nth-child(3n+3) {
-        margin-right: 0;
-    }
-
 }
 @media (min-width: 1100px) {
     .brends-swiper__wrapper .brends-swiper__slide {
         width: 240px;
         margin-right: 32px;
     }
-    .brends-swiper__slide:nth-child(4n+4) {
-        margin-right: 0;
-    }
 }
-
 
 .brends-swiper__wrapper.brends--expanded {
     height: auto;

@@ -9,6 +9,12 @@
     height: 160px;
     top: 16px;
 }
+@media (min-width: 767px) {
+    .equipment-swiper {
+        padding-bottom: 0;
+        height: 175px;
+    }
+}
 .equipment-swiper__wrapper {
     display: flex;
 }
@@ -45,24 +51,20 @@
         flex-direction: column;
     }
     .equipment-swiper__wrapper {
+        box-sizing: border-box;
+        width: 100%;
         display: flex;
-        overflow: hidden;
-        justify-content: start;
         flex-wrap: wrap;
         padding-left: 24px;
         padding-right: 24px;
-        height: 176px;
-        
+        justify-content: space-between;
+        height: 100%;
     }
     .equipment-swiper__block {
         width: 224px;
-        margin-right: 24px;
         margin-bottom: 16px;
         display: flex;
         flex-direction: column;
-    }
-    .equipment-swiper__block:nth-child(3n+3) {
-        margin-right: 0;
     }
     .equipment-swiper__pagination {
         display: none;
