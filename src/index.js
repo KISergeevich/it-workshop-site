@@ -9,20 +9,33 @@ import "./styles/brends-swiper-block.css";
 import "./styles/equipment-swiper-block.css";
 import "./styles/price-swiper-block.css"
 
-const readMore = document.querySelector('.readmore__button-arrow');
+const readMore = document.querySelectorAll('.readmore__button-arrow');
 
 const brends = document.querySelector('.brends-swiper__wrapper');
+const equipment = document.querySelector('.equipment-swiper');
 
-readMore.addEventListener ('click', function() {
+readMore[0].addEventListener ('click', function() {
     brends.classList.toggle('brends--expanded');
-    readMore.classList.toggle('readmore__button-arrow--reverse');
+    readMore[0].classList.toggle('readmore__button-arrow--reverse');
 
     if (brends.classList.contains('brends--expanded')) {
-        readMore.textContent = 'Скрыть';
+        readMore[0].textContent = 'Скрыть';
     } else {
-        readMore.textContent = 'Показать всё';
+        readMore[0].textContent = 'Показать всё';
     }
 });
+
+readMore[1].addEventListener ('click', function() {
+    equipment.classList.toggle('equipment--expanded');
+    readMore[1].classList.toggle('readmore__button-arrow--reverse');
+
+    if (equipment.classList.contains('equipment--expanded')) {
+        readMore[1].textContent = 'Скрыть';
+    } else {
+        readMore[1].textContent = 'Показать всё';
+    }
+});
+
 
 let brendsSwiper;
 function breakpointChecker(event) {
