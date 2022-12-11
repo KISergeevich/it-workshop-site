@@ -4,10 +4,7 @@
     padding: 0;
     font-family: "TT Lakes", "TimesNewRoman", sans-serif;
     box-sizing:border-box;
-    height: 597px;
     min-width: 320px;
-    margin: 0 auto;
-    max-width: 1120px;
 }
 
 *::after, *::before {
@@ -32,7 +29,7 @@ span {
     margin-bottom: 20px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     span {
         display: inline;
     }
@@ -48,6 +45,12 @@ p {
     margin: 0;
     padding: 0;
 }
+@media (min-width: 1440px) {
+    .main-info {
+        display: grid;
+        grid-template-columns: 306px 1fr;
+    }
+}
 
 .main-info__buttontext {
     white-space: nowrap;
@@ -58,14 +61,18 @@ p {
     justify-content: center;
     align-items: center;
 }
-.main-info {
+.main-info__desktop {
     display: flex;
     flex-direction: column; 
     align-items: center;
     background: #F8F8F8;
     min-width: 320px;
 }
-
+@media (min-width: 1440px) {
+    .main-info__desktop {
+        width: 100%;
+    }
+}
 .main-info__title {
     display: flex;
     flex-direction: space-between;
@@ -73,7 +80,7 @@ p {
     width: 100%;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__title {
         margin-top: 42px;
     }
@@ -96,7 +103,7 @@ p {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__highlight {
         display: none;
     }
@@ -119,7 +126,7 @@ p {
     color: #1B1C21;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__title-text {
         margin: 0;
     }
@@ -132,7 +139,7 @@ p {
     margin-left: auto;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__button-desktop {
         display: flex;
     }
@@ -163,7 +170,7 @@ p {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__slide-menu {
         flex-wrap: wrap;
     }
@@ -198,7 +205,7 @@ p {
     outline: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__nav {
         padding-left: 22px;
         padding-right: 22px;
@@ -237,7 +244,7 @@ p {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__title {
         margin-bottom: 8px;
     }
@@ -253,7 +260,7 @@ p {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
     .main-info__img {
         margin-right: 0;
     }
