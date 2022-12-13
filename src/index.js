@@ -9,99 +9,72 @@ import "./styles/brends-swiper-block.css";
 import "./styles/equipment-swiper-block.css";
 import "./styles/price-swiper-block.css"
 
-const readMore = document.querySelectorAll('.readmore__button-arrow');
 
-const brends = document.querySelector('.brends-swiper__wrapper');
-const equipment = document.querySelector('.equipment-swiper');
+function readMore(blockClass) {
+    const readMoreClass = '.readmore__button-arrow--' + blockClass;
+    const readMore = document.querySelector(readMoreClass);
+    const containerClass = '.' + blockClass + '-swiper';
+    const container = document.querySelector(containerClass);
 
-readMore[0].addEventListener ('click', function() {
-    brends.classList.toggle('brends--expanded');
-    readMore[0].classList.toggle('readmore__button-arrow--reverse');
+    readMore.addEventListener ('click', function() {
+        container.classList.toggle('swiper--expanded');
+        readMore.classList.toggle('readmore__button-arrow--reverse');
+    
+        if (container.classList.contains('swiper--expanded')) {
+            readMore.textContent = 'Скрыть';
+        } else {
+            readMore.textContent = 'Показать всё';
+        }
+    });
+};
 
-    if (brends.classList.contains('brends--expanded')) {
-        readMore[0].textContent = 'Скрыть';
-    } else {
-        readMore[0].textContent = 'Показать всё';
-    }
-});
-
-readMore[1].addEventListener ('click', function() {
-    equipment.classList.toggle('equipment--expanded');
-    readMore[1].classList.toggle('readmore__button-arrow--reverse');
-
-    if (equipment.classList.contains('equipment--expanded')) {
-        readMore[1].textContent = 'Скрыть';
-    } else {
-        readMore[1].textContent = 'Показать всё';
-    }
-});
-
-
-let brendsSwiper;
 function breakpointChecker(event) {
-    if (event.matches === true) {
-        if (brendsSwiper !== undefined) {
-            brendsSwiper.destroy(true, true);
-        }
-        if (equipmentSwiper !== undefined) {
-            equipmentSwiper.destroy(true, true);
-        }
-        if (priceSwiper !== undefined) {
-            priceSwiper.destroy(true, true);
-        }
-    } else if (event.matches === false) {
-        enableBrendsSwiper();
-        enableEquipmentSwiper();
-        enablePriceSwiper();
+    if (event.matches) {
+        disableSwiper(brendsSwiper);
+        disableSwiper(equipmentSwiper);
+        disableSwiper(priceSwiper);
+    } else {
+        brendsSwiper = enableSwiper('brends');
+        equipmentSwiper = enableSwiper('equipment');
+        priceSwiper = enableSwiper('price');
     }
-};
+}
 
-function enableBrendsSwiper() {
-    brendsSwiper = new Swiper('.brends-swiper', {
+function enableSwiper(blockClass) {
+    const swiperClass = '.' + blockClass + '-swiper';
+    const paginationClass = '.' + blockClass + '-swiper__pagination';
+    const slideClass = blockClass + '-swiper__slide';
+    
+    return new Swiper(swiperClass, {
         pagination: {
-            el: ".brends-swiper__pagination",
+            el: paginationClass,
             clickable: true,
         },
         slidesPerView: 'auto',
-        slideClass: 'brends-swiper__slide',
+        slideClass: slideClass,
         centeredSlides: false,
         spaceBetween: 16,
     });
-};
-let equipmentSwiper;
-function enableEquipmentSwiper() {
-    equipmentSwiper = new Swiper('.equipment-swiper', {
-        pagination: {
-            el: ".equipment-swiper__pagination",
-            clickable: true,
-        },
-        autoHeight: true,
-        slidesPerView: 'auto',
-        slideClass: 'equipment-swiper__block',
-        centeredSlides: false,
-        spaceBetween: 16,
-    });
-};
-let priceSwiper;
-function enablePriceSwiper() {
-    priceSwiper = new Swiper('.price-swiper', {
-        pagination: {
-            el: ".price-swiper__pagination",
-            clickable: true,
-        },
-        autoHeight: true,
-        slidesPerView: 'auto',
-        slideClass: 'price-swiper__slide',
-        centeredSlides: false,
-        spaceBetween: 16,
-    });
-};
+}
+
+function disableSwiper(swiper) {
+    if (swiper !== undefined) {
+        swiper.destroy(true, true);
+    }
+}
+
+readMore('brends');
+readMore('equipment');
+
 const breakpoint = window.matchMedia('(min-width:767px)');
-
 breakpoint.addEventListener('change', breakpointChecker);
 
+let brendsSwiper;
+let equipmentSwiper;
+let priceSwiper;
 if (breakpoint.matches === false) {
-    enableBrendsSwiper();
-    enableEquipmentSwiper();
-    enablePriceSwiper();
+    brendsSwiper = enableSwiper('brends');
+    equipmentSwiper = enableSwiper('equipment');
+    priceSwiper = enableSwiper('price');
 } 
+

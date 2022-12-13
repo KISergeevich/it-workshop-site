@@ -19,7 +19,7 @@
 .equipment-swiper__wrapper {
     display: flex;
 }
-.equipment-swiper__block.swiper-slide {
+.equipment-swiper__slide.swiper-slide {
     box-sizing: border-box;
     width: 240px;
     height: 160px;
@@ -64,7 +64,7 @@
         padding-left: 24px;
         height: auto;
     }
-    .equipment-swiper__block {
+    .equipment-swiper__slide {
         justify-self: center;
         width: 224px;
         display: flex;
@@ -81,7 +81,6 @@
         padding-left: 32px;
     }
 }
-
-.equipment--expanded {
+.equipment-swiper.swiper--expanded {
     height: auto;
 }
