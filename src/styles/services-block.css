@@ -86,28 +86,28 @@ p {
     }
 }
 
-.main-info__highlight {
+.highlight__mobile {
     display: flex;
     align-items: center;
     margin-right: 5%;
     align-self: center;
 }
 
-.main-info__highlight-for-desktop {
+.highlight__desktop {
     display: none;
 }
 
 @media (min-width: 767px) {
-    .main-info__highlight {
+    .highlight__mobile {
         margin-right: 3%; 
     }
 }
 
 @media (min-width: 1440px) {
-    .main-info__highlight {
+    .highlight__mobile {
         display: none;
     }
-    .main-info__highlight-for-desktop {
+    .highlight__desktop {
         display: flex;
         align-items: center;
         margin-right: 3%;

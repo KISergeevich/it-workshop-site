@@ -38,10 +38,10 @@
     <main class="main-info">
         <div class="burger-menu">
             <div class="burger-menu__header">
-                <button type="button" class="burger-menu__button burger-menu__button_cross burger-menu__button_desktop" name="burger">   
+                <button type="button" class="button-red__circle button-red__circle_cross button-red__circle_desktop" name="burger">   
                 </button>
                 <a href="#" class="burger-menu__logo"><img src="assets\IMG\logo.png" alt="Лого компании"></a>
-                <button type="button" class="burger-menu__button burger-menu__button_loop" name="burger">   
+                <button type="button" class="button-red__circle button-red__circle_loop" name="burger">   
                 </button>
             </div>
             <nav class="burger-menu__navigation navigation">
@@ -56,11 +56,11 @@
             </nav>
             <div class="burger-menu__contacts contacts">
                 <div class="contacts__icon">
-                    <button type="button" class="burger-menu__button burger-menu__button_phone" name="group">
+                    <button type="button" class="button-red__circle button-red__circle_phone" name="group">
                     </button>
-                    <button type="button" class="burger-menu__button burger-menu__button_massage" name="icon">
+                    <button type="button" class="button-red__circle button-red__circle_massage" name="icon">
                     </button>
-                    <button type="button" class="burger-menu__button burger-menu__button_icon" name="icon">
+                    <button type="button" class="button-red__circle button-red__circle_icon" name="icon">
                     </button>
                 </div>
                 <p><a href="mailto:mail@cps.com" class="contacts__email">mail@cps.com</a></p>
@@ -74,13 +74,13 @@
         </div>
         <div class="main-info__desktop">
             <div class="main-info__title">
-                <div class="main-info__highlight">
+                <div class="highlight__mobile">
                     <svg width="4" height="40" viewBox="0 0 4 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4 4C4 1.79086 2.20914 0 0 0V0V40V40C2.20914 40 4 38.2091 4 36V4Z" fill="#41F6D7" />
                     </svg>
                 </div>
-                <div class="main-info__highlight-for-desktop">
+                <div class="highlight__desktop">
                     <svg width="3" height="40" viewBox="0 0 3 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M3 1.5C3 0.671574 2.32843 0 1.5 0V0C0.671573 0 0 0.671573 0 1.5V38.5C0 39.3284 0.671573 40 1.5 40V40C2.32843 40 3 39.3284 3 38.5V1.5Z"
@@ -346,6 +346,34 @@
                 <p class="footer-block__text">Политика конфиденциальности</p>
                 <p class="footer-block__text">Информация, размещенная на данной странице, не является публичной офертой</p>
             </div>
+        </div>
+        <div class="feedback">
+            <button type="button" class="button-red__circle button-red__circle_close" name="close"></button>
+            <div class="feedback__highlight-mobile feedback__highlight-mobile_after">
+                <svg width="4" height="40" viewBox="0 0 4 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4 4C4 1.79086 2.20914 0 0 0V0V40V40C2.20914 40 4 38.2091 4 36V4Z" fill="#41F6D7" />
+                </svg>
+            </div>
+            <div class="feedback__highlight-desktop feedback__highlight-mobile_after">
+                <svg width="3" height="40" viewBox="0 0 3 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 1.5C3 0.671574 2.32843 0 1.5 0V0C0.671573 0 0 0.671573 0 1.5V38.5C0 39.3284 0.671573 40 1.5 40V40C2.32843 40 3 39.3284 3 38.5V1.5Z"
+                        fill="#41F6D7" />
+                </svg>
+            </div>
+            <form action="#" method="post">
+                <input class="feedback__input" type="text" placeholder="Имя">
+                <input class="feedback__input" type="tel" placeholder="Телефон">
+                <input class="feedback__input" type="email" placeholder="Электронная почта">
+                <textarea class="feedback__input feedback__input_textarea" name="comment" cols="30" rows="4" placeholder="Сообщение"></textarea>
+                <p class="feedback__submit">Нажимая “отправить”, вы даете согласие на <a href="#" class="feedback__submit_red">обработку персональных данных</a>
+                     и соглашаетесь с нашей <a href="#" class="feedback__submit_red">политикой конфиденциальности</a>
+                </p>
+                <div class="button-order button-order_submit">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
         </div>
     </main>
     <script src="index.js"></script>
