@@ -146,39 +146,39 @@
     .price-swiper__service {
        align-self: center;
     }
-    .price-swiper__service_width {
+    .price-swiper__service--width {
         width: 81px;
         margin-right: 20px;
     }
-    .price-swiper__service_center {
+    .price-swiper__service--center {
         width: 74px;
         margin-right: 22px;
     }
 }
 @media (min-width: 1440px) {
-    .price-swiper__service_width {
+    .price-swiper__service--width {
         margin-right: 111px;
     }
-    .price-swiper__service_center {
+    .price-swiper__service--center {
         width: 74px;
         margin-right: 175px;
     }
 }
-.price-swiper__content_flex {
+.price-swiper__content--flex {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
 }
 @media (min-width: 767px) {
-    .price-swiper__content_flex {
+    .price-swiper__content--flex {
         align-items: center;
     }
 }
-.price-swiper__content_bottom {
+.price-swiper__content--bottom {
     margin-top: 18px;
 }
 @media (min-width: 767px) {
-    .price-swiper__content_bottom {
+    .price-swiper__content--bottom {
         margin-top: 0;
     }
 }

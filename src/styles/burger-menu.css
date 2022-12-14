@@ -41,19 +41,19 @@
 .button-red__circle:focus {
     transition-duration: 300ms;
     box-shadow: 0 0 15px rgba(0, 0, 0, .5) inset;
-    outline: none;
+    outline: 3px solid #D9FFF5;
 }
 
-.button-red__circle_cross {
+.button-red__circle--cross {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.79348 1.25712C2.40295 0.866593 1.76979 0.866592 1.37927 1.25712L1.25712 1.37927C0.866592 1.76979 0.866593 2.40296 1.25712 2.79348L7.46364 9L1.25712 15.2065C0.866593 15.597 0.866592 16.2302 1.25712 16.6207L1.37927 16.7429C1.76979 17.1334 2.40295 17.1334 2.79348 16.7429L9 10.5364L15.2065 16.7429C15.597 17.1334 16.2302 17.1334 16.6207 16.7429L16.7429 16.6207C17.1334 16.2302 17.1334 15.597 16.7429 15.2065L10.5364 9L16.7429 2.79348C17.1334 2.40296 17.1334 1.76979 16.7429 1.37927L16.6207 1.25712C16.2302 0.866592 15.597 0.866593 15.2065 1.25712L9 7.46364L2.79348 1.25712Z' fill='white'/%3e%3c/svg%3e ");
     margin-left: 24px;
 }
 @media (min-width: 1440px) {
-    .button-red__circle_desktop {
+    .button-red__circle--desktop-burger {
         display: none;
     }
 }
-.button-red__circle_loop {
+.button-red__circle.button-red__circle--loop {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.5006 11.0006H11.7106L11.4306 10.7306C12.6306 9.33063 13.2506 7.42063 12.9106 5.39063C12.4406 2.61063 10.1206 0.390626 7.32063 0.0506256C3.09063 -0.469374 -0.469374 3.09063 0.0506256 7.32063C0.390626 10.1206 2.61063 12.4406 5.39063 12.9106C7.42063 13.2506 9.33063 12.6306 10.7306 11.4306L11.0006 11.7106V12.5006L15.2606 16.7506C15.6706 17.1606 16.3306 17.1606 16.7406 16.7506L16.7506 16.7406C17.1606 16.3306 17.1606 15.6706 16.7506 15.2606L12.5006 11.0006ZM6.50063 11.0006C4.01063 11.0006 2.00063 8.99063 2.00063 6.50063C2.00063 4.01063 4.01063 2.00063 6.50063 2.00063C8.99063 2.00063 11.0006 4.01063 11.0006 6.50063C11.0006 8.99063 8.99063 11.0006 6.50063 11.0006Z' fill='white'/%3e%3c/svg%3e ");
     margin-right: 24px;
 }
@@ -127,16 +127,16 @@
     margin-bottom: 16px;
 }
 
-.button-red__circle_phone {
+.button-red__circle.button-red__circle--phone {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.76019 12.25L4.30019 11.96C4.91019 11.89 5.51019 12.1 5.94019 12.53L7.78019 14.37C10.6102 12.93 12.9302 10.62 14.3702 7.78L12.5202 5.93C12.0902 5.5 11.8802 4.9 11.9502 4.29L12.2402 1.77C12.3602 0.76 13.2102 0 14.2302 0H15.9602C17.0902 0 18.0302 0.94 17.9602 2.07C17.4302 10.61 10.6002 17.43 2.07019 17.96C0.940193 18.03 0.00019455 17.09 0.00019455 15.96V14.23C-0.00980568 13.22 0.750193 12.37 1.76019 12.25Z' fill='white'/%3e%3c/svg%3e ");
 }
 
-.button-red__circle_massage {
+.button-red__circle.button-red__circle--massage {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 0H2C0.9 0 0.01 0.9 0.01 2L0 20L4 15H18C19.1 15 20 14.1 20 13V2C20 0.9 19.1 0 18 0ZM11 11H5C4.45 11 4 10.55 4 10C4 9.45 4.45 9 5 9H11C11.55 9 12 9.45 12 10C12 10.55 11.55 11 11 11ZM15 6H5C4.45 6 4 5.55 4 5C4 4.45 4.45 4 5 4H15C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6Z' fill='white'/%3e%3c/svg%3e ");
     background-position: 50% 12px;
 }
 
-.button-red__circle_icon {
+.button-red__circle.button-red__circle--icon {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.5 9C12.9853 9 15 6.98528 15 4.5C15 2.01472 12.9853 0 10.5 0C8.01472 0 6 2.01472 6 4.5C6 6.98528 8.01472 9 10.5 9Z' fill='white'/%3e%3cpath d='M0.0165859 16.6118C-0.113065 17.3412 0.535191 18 1.33903 18H18.6604C19.4902 18 20.1125 17.3412 19.9829 16.6118C19.2309 12.4 15.0561 10 9.99973 10C4.94333 10 0.768563 12.4 0.0165859 16.6118Z' fill='white'/%3e%3c/svg%3e ");
 }
 
@@ -202,26 +202,42 @@
 
 .feedback {
     width: 320px;
-    height: 100%;
-    display: flex;
+    height: 676px;
+    display: none;
+    position: absolute;
     flex-direction: column;
     box-sizing: border-box;
-
 }
-.button-red__circle_close {
+@media (min-width: 1440px) {
+    .feedback {
+        width: 440px;
+        right: 0;
+        background-color: #fff;
+        z-index: 3;
+        height: 940px;
+    }
+}
+.button-red__circle.button-red__circle--close {
     width: 40px;
     height: 40px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.79348 1.25712C2.40295 0.866593 1.76979 0.866592 1.37927 1.25712L1.25712 1.37927C0.866592 1.76979 0.866593 2.40296 1.25712 2.79348L7.46364 9L1.25712 15.2065C0.866593 15.597 0.866592 16.2302 1.25712 16.6207L1.37927 16.7429C1.76979 17.1334 2.40295 17.1334 2.79348 16.7429L9 10.5364L15.2065 16.7429C15.597 17.1334 16.2302 17.1334 16.6207 16.7429L16.7429 16.6207C17.1334 16.2302 17.1334 15.597 16.7429 15.2065L10.5364 9L16.7429 2.79348C17.1334 2.40296 17.1334 1.76979 16.7429 1.37927L16.6207 1.25712C16.2302 0.866592 15.597 0.866593 15.2065 1.25712L9 7.46364L2.79348 1.25712Z' fill='white'/%3e%3c/svg%3e ");
     margin-top: 24px;
     margin-bottom: 40px;
 }
-.feedback__highlight-desktop {
+@media (min-width: 1440px) {
+    .button-red__circle--absolute {
+        position: absolute;
+        left: -92px;
+        top: 8px;
+    }
+}
+.highlight-desktop {
     display: none;
 }
-.feedback__highlight-mobile_after {
+.highlight-mobile__after {
     height: 40px;
 }
-.feedback__highlight-mobile_after::after {
+.highlight-mobile__after::after {
     content: "Обратная связь";
     font-family: 'TT Lakes';
     font-size: 24px;
@@ -234,6 +250,28 @@
     position: relative;
     top: -12px;
 }
+@media (min-width: 1440px) {
+    .highlight-mobile {
+        display: none;
+    }
+    .highlight-desktop {
+        display: block;
+        margin-top: 32px;
+    }
+    .highlight-desktop__after::after {
+        content: "Обратная связь";
+        font-family: 'TT Lakes';
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6000000238418579px;
+        text-align: left;
+        font-weight: bold;
+        color: #1B1C21;
+        margin-left: 32px;
+        position: relative;
+        top: -12px;
+    }
+}
 .feedback__input {
     margin-left: 16px;
     height: 48px;
@@ -241,8 +279,15 @@
     border: 1px solid #EAEAEA;
     border-radius: 8px;
     margin-top: 16px;
+    box-sizing: border-box;
 }
-.feedback__input_textarea {
+@media (min-width: 1440px) {
+    .feedback__input {
+        margin-left: 31px;
+        width: 376px;
+    }
+}
+.feedback__input--textarea {
     height: 118px;
     resize: none;
 }
@@ -256,7 +301,7 @@
     color: #b5b6bc;
     font-weight: 500;
 }
-.feedback__submit {
+.submit-text {
     margin: 16px 16px 23px 16px;
     font-family: 'TT Lakes';
     font-size: 14px;
@@ -266,6 +311,80 @@
     font-weight: 500;
     color: #7E7E82;
 }
-.feedback__submit_red {
+@media (min-width: 1440px) {
+    .submit-text {
+        margin-left: 31px;
+        margin-right: 32px;
+    }
+}
+.submit-text__red {
     color: #FF3E79;
+}
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+}
+.feedback__submit {
+    margin-left: auto;
+    margin-right: 16px;
+}
+@media (min-width: 1440px) {
+    .feedback__submit {
+        margin-right: 32px;
+    }
+}
+/* Менюшка Заказать звонок */
+
+.request-call {
+    background-color: #fff;
+    width: 320px;
+    height: 676px;
+    position: absolute;
+    display: none;
+}
+@media (min-width: 1440px) {
+    .request-call {
+        width: 440px;
+        right: 0;
+        background-color: #fff;
+        z-index: 3;
+        height: 940px;
+    }
+}
+.request-call__input {
+    margin: 24px 16px 0;
+    height: 48px;
+    width: 288px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+@media (min-width: 1440px) {
+    .request-call__input {
+        width: 376px;
+        margin-left: 32px;
+    }
+}
+.request-call__input::placeholder {
+    padding-left: 16px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #b5b6bc;
+    font-weight: 500;
+}
+.request-call__form {
+    display: flex;
+    flex-direction: column;
+}
+.request-call__submit {
+    margin-left: auto;
+    margin-right: 16px;
+}
+@media (min-width: 1440px) {
+    .request-call__submit {
+        margin-right: 32px;
+    }
 }
