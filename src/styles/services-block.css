@@ -5,6 +5,7 @@
     font-family: "TT Lakes", "TimesNewRoman", sans-serif;
     box-sizing:border-box;
     min-width: 320px;
+    
 }
 
 *::after, *::before {

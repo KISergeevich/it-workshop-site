@@ -205,15 +205,15 @@
     height: 676px;
     display: none;
     position: absolute;
-    flex-direction: column;
     box-sizing: border-box;
+    right: 0;
+    background-color: #fff;
+    z-index: 3;
+    top: 0;
 }
 @media (min-width: 1440px) {
     .feedback {
         width: 440px;
-        right: 0;
-        background-color: #fff;
-        z-index: 3;
         height: 940px;
     }
 }
@@ -341,13 +341,14 @@
     height: 676px;
     position: absolute;
     display: none;
+    right: 0;
+    z-index: 3;
+    top: 0;
+    box-sizing: border-box;
 }
 @media (min-width: 1440px) {
     .request-call {
         width: 440px;
-        right: 0;
-        background-color: #fff;
-        z-index: 3;
         height: 940px;
     }
 }
