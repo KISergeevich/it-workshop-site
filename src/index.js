@@ -63,8 +63,39 @@ function disableSwiper(swiper) {
     }
 }
 
+function workModal(modalBlock) {
+
+const buttonClass = '.button-red__circle--' + modalBlock;
+const classModal = '.' + modalBlock;
+
+const button = document.querySelector(buttonClass);
+const modal = document.querySelector(classModal);
+
+const blur = document.querySelector('.blur')
+const close = document.querySelector('.button-red__circle--cross');
+
+    button.addEventListener ('click', function() {
+        modal.classList.add('open-modal');
+        close.addEventListener ('click', function() {
+            modal.classList.remove('close-modal');
+            blur.classList.remove('close-modal');
+        });
+        blur.addEventListener ('click', function() {
+            blur.classList.remove('open-modal');
+            modal.classList.remove('open-modal');
+        })
+        if (modal.classList.contains('close-modal')) {
+            blur.classList.add('close-modal');
+        }
+    });
+}
+
 readMore('brends');
 readMore('equipment');
+
+workModal('request-call');
+workModal('feedback');
+workModal('burger-menu');
 
 const breakpoint = window.matchMedia('(min-width:767px)');
 breakpoint.addEventListener('change', breakpointChecker);
