@@ -232,9 +232,7 @@
     outline: none;
 }
 
-.open-modal {
-    display: flex;
-}
+
 /* менюшка обратная связь */
 
 .feedback {
@@ -425,4 +423,7 @@
     .request-call__submit {
         margin-right: 32px;
     }
+}
+.open-modal {
+    display: flex;
 }
