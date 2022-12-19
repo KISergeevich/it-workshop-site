@@ -26,7 +26,8 @@ function readMore(blockClass) {
             readMore.textContent = 'Показать всё';
         }
     });
-};
+}
+
 
 function breakpointChecker(event) {
     if (event.matches) {
@@ -64,29 +65,6 @@ function disableSwiper(swiper) {
 }
 
 
-// function workModal(buttonBlock) {
-//     // блок где находятся кнопки
-// const buttonBlockClass = '.' + buttonBlock + '-menu';
-// const blockClass = document.querySelector(buttonBlockClass);
-
-//     function buttonModal(classModal) {
-//         const buttonClass = '.button-red__circle--' + classModal;
-//         const button = blockClass.querySelector(buttonClass);
-
-//         const modalBlock = '.' + classModal;
-//         const modal = document.querySelector(modalBlock);
-
-//         button.addEventListener('click', function() {
-//             modal.classList.add('open-modal')
-//         });
-//     };
-//     buttonModal('burger-menu');
-//     buttonModal('feedback');
-//     buttonModal('request-call');
-// }
-// workModal('upper');
-// workModal('burger');
-
 readMore('brends');
 readMore('equipment');
 
@@ -103,3 +81,73 @@ if (breakpoint.matches === false) {
     priceSwiper = enableSwiper('price');
 } 
 
+
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerButton =  document.querySelector('.button-red__circle--burger-menu');
+const blur = document.querySelector('.blur');
+const closeButtonBurger = burgerMenu.querySelector('.button-red__circle--close');
+
+burgerButton.addEventListener('click', function() {
+    burgerMenu.classList.add('open-modal');
+    blur.classList.add('open-modal');
+});
+
+closeButtonBurger.addEventListener('click', function() {
+    burgerMenu.classList.remove('open-modal');
+    blur.classList.remove('open-modal');
+});
+
+const burgerButtonFeedback = burgerMenu.querySelector('.button-red__circle--feedback');
+const burgerButtonCall = burgerMenu.querySelector('.button-red__circle--request-call');
+
+burgerButtonFeedback.addEventListener('click', function() {
+    feedback.classList.add('open-modal');
+    call.classList.remove('open-modal');
+    blur.classList.add('open-modal');
+});
+
+burgerButtonCall.addEventListener('click', function() {
+    call.classList.add('open-modal');
+    feedback.classList.remove('open-modal');
+    blur.classList.add('open-modal');
+});
+
+const feedback = document.querySelector('.feedback');
+const closeButtonFeedback = feedback.querySelector('.button-red__circle--close');
+
+closeButtonFeedback.addEventListener('click', function() {
+    feedback.classList.remove('open-modal');
+    blur.classList.remove('open-modal');
+    if (burgerMenu.classList.contains('open-modal')) {
+        blur.classList.add('open-modal');
+    }
+});
+
+const call = document.querySelector('.request-call');
+const closeButtonCall = call.querySelector('.button-red__circle--close');
+
+closeButtonCall.addEventListener('click', function() {
+    call.classList.remove('open-modal');
+    blur.classList.remove('open-modal');
+    if (burgerMenu.classList.contains('open-modal')) {
+        blur.classList.add('open-modal');
+    }
+});
+
+const headerBlock = document.querySelector('.upper-menu__mob');
+
+const buttonHeaderFeedback = headerBlock.querySelector('.button-red__circle--feedback');
+buttonHeaderFeedback.addEventListener('click', function() {
+    feedback.classList.add('open-modal');
+    blur.classList.add('open-modal');
+});
+
+const buttonHeaderCall = headerBlock.querySelector('.button-red__circle--request-call');
+buttonHeaderCall.addEventListener('click', function() {
+    call.classList.add('open-modal');
+    blur.classList.add('open-modal');
+});
+
+if (feedback.classList.contains('open-modal')) {
+    blur.classList.add('open-modal');
+};
