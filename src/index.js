@@ -7,50 +7,7 @@ import "./styles/header-footer.css";
 import "./styles/services-block.css";
 import "./styles/brends-swiper-block.css";
 import "./styles/equipment-swiper-block.css";
-import "./styles/price-swiper-block.css"
-
-function readMore(blockClass) {
-    const readMoreClass = '.readmore__button-arrow--' + blockClass;
-    const readMore = document.querySelector(readMoreClass);
-    const containerClass = '.' + blockClass + '-swiper';
-    const container = document.querySelector(containerClass);
-
-    readMore.addEventListener ('click', function() {
-        container.classList.toggle('swiper--expanded');
-        readMore.classList.toggle('readmore__button-arrow--reverse');
-    
-        if (container.classList.contains('swiper--expanded')) {
-            readMore.textContent = 'Скрыть';
-        } else {
-            readMore.textContent = 'Показать всё';
-        }
-    });
-}
-
-
-function breakpointChecker(event) {
-    if (event.matches) {
-        disableSwiper('brends');
-        disableSwiper('equipment');
-        disableSwiper('price');
-    } else {
-        enableSwiper('brends');
-        enableSwiper('equipment');
-        enableSwiper('price');
-    }
-}
-
-readMore('brends');
-readMore('equipment');
-
-const breakpoint = window.matchMedia('(min-width:767px)');
-breakpoint.addEventListener('change', breakpointChecker);
-
-if (breakpoint.matches === false) {
-    enableSwiper('brends');
-    enableSwiper('equipment');
-    enableSwiper('price');
-} 
+import "./styles/price-swiper-block.css";
 
 function prepareBurgerMenu() {
     const menuModal = document.querySelector('.burger-menu');
@@ -60,6 +17,7 @@ function prepareBurgerMenu() {
     listenOpen(menuOpen, menuModal);
     listenClose(menuClose, menuModal);
 }
+
 function prepareActions() {
     const feedbackModal = document.querySelector('.feedback');
     const menuModal = document.querySelector('.burger-menu');
@@ -81,6 +39,47 @@ function prepareActions() {
     listenClose(menuCallClose, callModal,  menuModal);
 }
 
+function readMore(blockClass) {
+    const readMoreClass = '.readmore__button-arrow--' + blockClass;
+    const readMore = document.querySelector(readMoreClass);
+    const containerClass = '.' + blockClass + '-swiper';
+    const container = document.querySelector(containerClass);
+
+    readMore.addEventListener ('click', function() {
+        container.classList.toggle('swiper--expanded');
+        readMore.classList.toggle('readmore__button-arrow--reverse');
+    
+        if (container.classList.contains('swiper--expanded')) {
+            readMore.textContent = 'Скрыть';
+        } else {
+            readMore.textContent = 'Показать всё';
+        }
+    });
+}
+
+function breakpointChecker(event) {
+    if (event.matches) {
+        disableSwiper('brends');
+        disableSwiper('equipment');
+        disableSwiper('price');
+    } else {
+        enableSwiper('brends');
+        enableSwiper('equipment');
+        enableSwiper('price');
+    }
+}
 
 prepareBurgerMenu();
 prepareActions();
+
+readMore('brends');
+readMore('equipment');
+
+const breakpoint = window.matchMedia('(min-width:767px)');
+breakpoint.addEventListener('change', breakpointChecker);
+
+if (breakpoint.matches === false) {
+    enableSwiper('brends');
+    enableSwiper('equipment');
+    enableSwiper('price');
+} 
