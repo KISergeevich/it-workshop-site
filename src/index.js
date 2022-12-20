@@ -101,24 +101,24 @@ function removeModal(element) {
     }
 }
 
-function blurOn(closeModal) { //closeModal - функция, которая будет вызвана на клике по блюру, что она делает и за что отвечает не дело функции этой.
-    const blur = document.querySelector('.blur');
+function blur(closeModal) { //closeModal - функция, которая будет вызвана на клике по блюру, что она делает и за что отвечает не дело функции этой.
+    const blurElement = document.querySelector('.blur');
     addBlur();
-    blur.addEventListener('click', function () {
+    blurElement.addEventListener('click', function () {
         removeBlur();
         closeModal();
     });
 }
-function openModal(button, modal, deleteModal) {
+function listenOpen(button, modal, deleteModal) {
     button.addEventListener('click', function () {
         addModal(modal);
         removeModal(deleteModal);
-        blurOn(function() {
+        blur(function() {
             removeModal(modal)
         });
     });
 }
-function closeModal(button, modal, menu) {
+function listenClose(button, modal, menu) {
     button.addEventListener('click', function () {
         removeModal(modal);
         if (menu === undefined || !menu.classList.contains('open-modal')) {
@@ -126,33 +126,35 @@ function closeModal(button, modal, menu) {
         }
     });
 }
+function prepareBurgerMenu() {
+    const menuModal = document.querySelector('.burger-menu');
+    const menuOpen =  document.querySelector('.button-red__circle--burger-menu');
+    const menuClose = menuModal.querySelector('.button-red__circle--close');
+    
+    listenOpen(menuOpen, menuModal);
+    listenClose(menuClose, menuModal);
+}
+function prepareActions() {
+    const feedbackModal = document.querySelector('.feedback');
+    const menuModal = document.querySelector('.burger-menu');
+    const callModal = document.querySelector('.request-call');
 
-const burgerMenu = document.querySelector('.burger-menu');
-const call = document.querySelector('.request-call');
-const feedback = document.querySelector('.feedback');
+    const headerBlock = document.querySelector('.upper-menu__mob');
+    const menuFeedbackOpen = menuModal.querySelector('.button-red__circle--feedback');
+    const menuFeedbackClose = feedbackModal.querySelector('.button-red__circle--close');
+    const headerFeedbackOpen = headerBlock.querySelector('.button-red__circle--feedback');
+    const menuCallOpen = menuModal.querySelector('.button-red__circle--request-call');
+    const menuCallClose = callModal.querySelector('.button-red__circle--close');
+    const headerCallOpen = headerBlock.querySelector('.button-red__circle--request-call');
 
-const burgerButton =  document.querySelector('.button-red__circle--burger-menu');
-
-const burgerButtonFeedback = burgerMenu.querySelector('.button-red__circle--feedback');
-const burgerButtonCall = burgerMenu.querySelector('.button-red__circle--request-call');
-const closeButtonBurger = burgerMenu.querySelector('.button-red__circle--close');
-
-const closeButtonCall = call.querySelector('.button-red__circle--close');
-const closeButtonFeedback = feedback.querySelector('.button-red__circle--close');
-
-const headerBlock = document.querySelector('.upper-menu__mob');
-
-const buttonHeaderFeedback = headerBlock.querySelector('.button-red__circle--feedback');
-const buttonHeaderCall = headerBlock.querySelector('.button-red__circle--request-call');
-
-openModal(burgerButton, burgerMenu);
-openModal(burgerButtonFeedback, feedback, call);
-openModal(burgerButtonCall, call, feedback);
-openModal(buttonHeaderFeedback, feedback);
-openModal(buttonHeaderCall, call);
-
-closeModal(closeButtonBurger, burgerMenu);
-closeModal(closeButtonFeedback, feedback,  burgerMenu);
-closeModal(closeButtonCall, call,  burgerMenu);
+    listenOpen(menuFeedbackOpen, feedbackModal, callModal);
+    listenOpen(menuCallOpen, callModal, feedbackModal);
+    listenOpen(headerFeedbackOpen, feedbackModal);
+    listenOpen(headerCallOpen, callModal);
+    listenClose(menuFeedbackClose, feedbackModal,  menuModal);
+    listenClose(menuCallClose, callModal,  menuModal);
+}
 
 
+prepareBurgerMenu();
+prepareActions();
