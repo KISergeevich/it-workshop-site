@@ -81,73 +81,63 @@ if (breakpoint.matches === false) {
     priceSwiper = enableSwiper('price');
 } 
 
+function blurOn(opener) {
+    blur.classList.add('open-modal');
+    blur.addEventListener('click', function () {
+        opener.classList.remove('open-modal');
+        blur.classList.remove('open-modal');
+    });
+}
+function openModal(button, addModal, removeModal) {
+    button.addEventListener('click', function () {
+        addModal.classList.add('open-modal');
+        if (removeModal !== undefined) {
+            removeModal.classList.remove('open-modal');
+        }
+        blurOn(addModal);
+    });
+}
+function closeModal(button, modal, menu) {
+    button.addEventListener('click', function () {
+        modal.classList.remove('open-modal');
+        blur.classList.remove('open-modal');
+        if (menu !== undefined) {
+            if (menu.classList.contains('open-modal')) {
+                blur.classList.add('open-modal');
+            }
+        }
+    });
+}
+
 
 const burgerMenu = document.querySelector('.burger-menu');
-const burgerButton =  document.querySelector('.button-red__circle--burger-menu');
+const call = document.querySelector('.request-call');
+const feedback = document.querySelector('.feedback');
+
 const blur = document.querySelector('.blur');
-const closeButtonBurger = burgerMenu.querySelector('.button-red__circle--close');
 
-burgerButton.addEventListener('click', function() {
-    burgerMenu.classList.add('open-modal');
-    blur.classList.add('open-modal');
-});
-
-closeButtonBurger.addEventListener('click', function() {
-    burgerMenu.classList.remove('open-modal');
-    blur.classList.remove('open-modal');
-});
+const burgerButton =  document.querySelector('.button-red__circle--burger-menu');
 
 const burgerButtonFeedback = burgerMenu.querySelector('.button-red__circle--feedback');
 const burgerButtonCall = burgerMenu.querySelector('.button-red__circle--request-call');
+const closeButtonBurger = burgerMenu.querySelector('.button-red__circle--close');
 
-burgerButtonFeedback.addEventListener('click', function() {
-    feedback.classList.add('open-modal');
-    call.classList.remove('open-modal');
-    blur.classList.add('open-modal');
-});
-
-burgerButtonCall.addEventListener('click', function() {
-    call.classList.add('open-modal');
-    feedback.classList.remove('open-modal');
-    blur.classList.add('open-modal');
-});
-
-const feedback = document.querySelector('.feedback');
-const closeButtonFeedback = feedback.querySelector('.button-red__circle--close');
-
-closeButtonFeedback.addEventListener('click', function() {
-    feedback.classList.remove('open-modal');
-    blur.classList.remove('open-modal');
-    if (burgerMenu.classList.contains('open-modal')) {
-        blur.classList.add('open-modal');
-    }
-});
-
-const call = document.querySelector('.request-call');
 const closeButtonCall = call.querySelector('.button-red__circle--close');
-
-closeButtonCall.addEventListener('click', function() {
-    call.classList.remove('open-modal');
-    blur.classList.remove('open-modal');
-    if (burgerMenu.classList.contains('open-modal')) {
-        blur.classList.add('open-modal');
-    }
-});
+const closeButtonFeedback = feedback.querySelector('.button-red__circle--close');
 
 const headerBlock = document.querySelector('.upper-menu__mob');
 
 const buttonHeaderFeedback = headerBlock.querySelector('.button-red__circle--feedback');
-buttonHeaderFeedback.addEventListener('click', function() {
-    feedback.classList.add('open-modal');
-    blur.classList.add('open-modal');
-});
-
 const buttonHeaderCall = headerBlock.querySelector('.button-red__circle--request-call');
-buttonHeaderCall.addEventListener('click', function() {
-    call.classList.add('open-modal');
-    blur.classList.add('open-modal');
-});
 
-if (feedback.classList.contains('open-modal')) {
-    blur.classList.add('open-modal');
-};
+openModal(burgerButton, burgerMenu);
+openModal(burgerButtonFeedback, feedback, call);
+openModal(burgerButtonCall, call, feedback);
+openModal(buttonHeaderFeedback, feedback);
+openModal(buttonHeaderCall, call);
+
+closeModal(closeButtonBurger, burgerMenu);
+closeModal(closeButtonFeedback, feedback,  burgerMenu);
+closeModal(closeButtonCall, call,  burgerMenu);
+
+
