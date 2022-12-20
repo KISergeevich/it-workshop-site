@@ -1,5 +1,6 @@
 
 import Swiper from 'swiper/bundle';
+import { listenClose, listenOpen } from './modal';
 import 'swiper/css/bundle';
 
 import "./styles/burger-menu.css";
@@ -8,7 +9,6 @@ import "./styles/services-block.css";
 import "./styles/brends-swiper-block.css";
 import "./styles/equipment-swiper-block.css";
 import "./styles/price-swiper-block.css"
-
 
 function readMore(blockClass) {
     const readMoreClass = '.readmore__button-arrow--' + blockClass;
@@ -81,51 +81,6 @@ if (breakpoint.matches === false) {
     priceSwiper = enableSwiper('price');
 } 
 
-
-function addBlur() {
-    const blur = document.querySelector('.blur');
-    blur.classList.add('open-modal');
-}
-function removeBlur() {
-    const blur = document.querySelector('.blur');
-    blur.classList.remove('open-modal');
-}
-function addModal(element) {
-    if (element !== undefined) {
-        element.classList.add('open-modal');
-    }
-}
-function removeModal(element) {
-    if (element !== undefined) {
-        element.classList.remove('open-modal');
-    }
-}
-
-function blur(closeModal) { //closeModal - функция, которая будет вызвана на клике по блюру, что она делает и за что отвечает не дело функции этой.
-    const blurElement = document.querySelector('.blur');
-    addBlur();
-    blurElement.addEventListener('click', function () {
-        removeBlur();
-        closeModal();
-    });
-}
-function listenOpen(button, modal, deleteModal) {
-    button.addEventListener('click', function () {
-        addModal(modal);
-        removeModal(deleteModal);
-        blur(function() {
-            removeModal(modal)
-        });
-    });
-}
-function listenClose(button, modal, menu) {
-    button.addEventListener('click', function () {
-        removeModal(modal);
-        if (menu === undefined || !menu.classList.contains('open-modal')) {
-            removeBlur();
-        }
-    });
-}
 function prepareBurgerMenu() {
     const menuModal = document.querySelector('.burger-menu');
     const menuOpen =  document.querySelector('.button-red__circle--burger-menu');
