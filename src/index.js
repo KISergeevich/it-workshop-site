@@ -1,6 +1,5 @@
-
-import Swiper from 'swiper/bundle';
 import { listenClose, listenOpen } from './modal';
+import { enableSwiper, disableSwiper } from './swiper';
 import 'swiper/css/bundle';
 
 import "./styles/burger-menu.css";
@@ -31,54 +30,26 @@ function readMore(blockClass) {
 
 function breakpointChecker(event) {
     if (event.matches) {
-        disableSwiper(brendsSwiper);
-        disableSwiper(equipmentSwiper);
-        disableSwiper(priceSwiper);
+        disableSwiper('brends');
+        disableSwiper('equipment');
+        disableSwiper('price');
     } else {
-        brendsSwiper = enableSwiper('brends');
-        equipmentSwiper = enableSwiper('equipment');
-        priceSwiper = enableSwiper('price');
+        enableSwiper('brends');
+        enableSwiper('equipment');
+        enableSwiper('price');
     }
 }
-
-function enableSwiper(blockClass) {
-    const swiperClass = '.' + blockClass + '-swiper';
-    const paginationClass = '.' + blockClass + '-swiper__pagination';
-    const slideClass = blockClass + '-swiper__slide';
-    
-    return new Swiper(swiperClass, {
-        pagination: {
-            el: paginationClass,
-            clickable: true,
-        },
-        slidesPerView: 'auto',
-        slideClass: slideClass,
-        centeredSlides: false,
-        spaceBetween: 16,
-    });
-}
-
-function disableSwiper(swiper) {
-    if (swiper !== undefined) {
-        swiper.destroy(true, true);
-    }
-}
-
 
 readMore('brends');
 readMore('equipment');
 
-
 const breakpoint = window.matchMedia('(min-width:767px)');
 breakpoint.addEventListener('change', breakpointChecker);
 
-let brendsSwiper;
-let equipmentSwiper;
-let priceSwiper;
 if (breakpoint.matches === false) {
-    brendsSwiper = enableSwiper('brends');
-    equipmentSwiper = enableSwiper('equipment');
-    priceSwiper = enableSwiper('price');
+    enableSwiper('brends');
+    enableSwiper('equipment');
+    enableSwiper('price');
 } 
 
 function prepareBurgerMenu() {
