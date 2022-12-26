@@ -9,13 +9,13 @@ function removeBlur() {
 }
 
 function addModal(element) {
-    if (element !== undefined) {
+    if (element) {
         element.classList.add('open-modal');
     }
 }
 
 function removeModal(element) {
-    if (element !== undefined) {
+    if (element) {
         element.classList.remove('open-modal');
     }
 }

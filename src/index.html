@@ -364,8 +364,8 @@
             </div>
             <form class="feedback__form" action="#" method="post">
                 <input class="feedback__input" type="text" placeholder="Имя">
-                <input class="feedback__input" type="tel" placeholder="Телефон">
-                <input class="feedback__input" type="email" placeholder="Электронная почта">
+                <input class="feedback__input" type="tel" placeholder="+7 (xxx) xxx-xx-xx" pattern="^[+][0-9] [(][0-9]{3}[)] [0-9]{3}[-][0-9]{2}[-][0-9]{2}$">
+                <input class="feedback__input" type="email" placeholder="example@mail.com" pattern="\S+@[a-z]+.[a-z]+">
                 <textarea class="feedback__input feedback__input--textarea" name="comment" cols="30" rows="4" placeholder="Сообщение"></textarea>
                 <p class="submit-text">Нажимая “отправить”, вы даете согласие на <a href="#" class="submit-text__red">обработку персональных данных</a>
                      и соглашаетесь с нашей <a href="#" class="submit-text__red">политикой конфиденциальности</a>
@@ -391,7 +391,7 @@
                 </svg>
             </div>
             <form class="request-call__form" action="#" method="post">
-                <input class="request-call__input" type="tel" placeholder="Телефон">
+                <input class="request-call__input" type="tel" placeholder="+7 (xxx) xxx-xx-xx" pattern="^[+][0-9] [(][0-9]{3}[)] [0-9]{3}[-][0-9]{2}[-][0-9]{2}$">
                 <p class="submit-text">Нажимая “отправить”, вы даете согласие на <a href="#" class="submit-text__red">обработку персональных данных</a>
                      и соглашаетесь с нашей <a href="#" class="submit-text__red">политикой конфиденциальности</a>
                 </p>

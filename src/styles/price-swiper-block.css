@@ -24,7 +24,7 @@
         background-color: #fff;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .price-swiper {
         padding-right: 32px;
         padding-left: 32px;
@@ -106,7 +106,7 @@
         display: none;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .price-title__text:first-of-type {
         margin-left: 24px;
         margin-right: auto;
@@ -155,7 +155,7 @@
         margin-right: 22px;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .price-swiper__service--width {
         margin-right: 111px;
     }
@@ -219,7 +219,7 @@
         padding: 0;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .get-offer {
         margin-right: auto;
         margin-left: 32px;

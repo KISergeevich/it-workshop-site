@@ -10,6 +10,9 @@ body {
 *::after, *::before {
     box-sizing: inherit;
 }
+input, textarea {
+    cursor: pointer;
+}
 .header-block {
     min-width: 320px;
     min-height: 56px;
@@ -39,7 +42,7 @@ body {
         margin-left: 24px;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .header-block__title {
         margin-left: 32px;
     }
@@ -89,7 +92,7 @@ body {
         height: auto;
     }
 } 
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .brends-swiper__wrapper {
         padding-left: 32px;
         padding-right: 32px;
@@ -139,7 +142,7 @@ body {
         justify-self: center;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .brends-swiper__wrapper .brends-swiper__slide {
         width: 240px;
     }
@@ -190,7 +193,7 @@ body {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
     .readmore {
         width: 1056px;
     }
